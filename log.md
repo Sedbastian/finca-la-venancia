@@ -1,0 +1,5 @@
+- `npx create-react-app shopping-cart/`
+- GitHub create shopping-cart repo
+- `git remote add origin git@github.com:Sedbastian/shopping-cart.git`
+- `git branch -M main`
+- `git push -u origin main`
