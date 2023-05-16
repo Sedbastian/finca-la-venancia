@@ -1,0 +1,52 @@
+@media (min-width: 600px) and (min-height: 400px) {
+  header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+header {
+  margin: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header > div.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+
+header > div.container > h1 {
+  margin: 0 auto 0 auto;
+  color: orange;
+  text-align: center;
+  font-family: Tangerine;
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px orangered;
+}
+
+header > div.container > nav {
+  margin: 0 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header > div.container > nav > a {
+  color: rgb(155, 117, 103);
+  font-size: 2rem;
+  white-space: nowrap;
+}
+header > div.container > nav > a:hover svg:not(.currentTab) {
+  transform: scale(1.1);
+  color: olive;
+}
+
+header > div.container > nav > a .currentTab {
+  color: rgb(184, 49, 0);
+}

@@ -1,0 +1,82 @@
+/* Between these widths Header wraps so main.home's padding should be larger */
+@media (min-width: 600px) and (max-width: 780px) {
+  main.home {
+    padding-top: 12rem !important;
+  }
+}
+
+/* Bigger than this width Header doesn't wrap */
+@media (min-width: 781px) and (min-height: 400px) {
+  main.home {
+    padding-top: 8rem !important;
+  }
+}
+
+main.home {
+  overflow-y: auto;
+}
+
+main.home > div.bioContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-content: center; */
+  gap: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 2rem;
+}
+
+main.home > div.bioContainer > div.imgContainer {
+  /* align-self: flex-start; */
+  /* /* margin-top: 0; */
+
+  margin-bottom: auto;
+
+  display: flex;
+  align-items: center;
+
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+  animation-duration: 10s;
+  /* animation-name: crazyBorder; */
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
+main.home > div.bioContainer > div.imgContainer img {
+  height: 19rem;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation-duration: 10s;
+  /* animation-name: crazyBorder; */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes crazyBorder {
+  from {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  to {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  }
+}
+
+main.home > div.bioContainer > p {
+  flex-basis: 30rem;
+  flex-grow: 1;
+  white-space: pre-wrap;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 1.4;
+  font-family: Gloria;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: palevioletred;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 2rem;
+}

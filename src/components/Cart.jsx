@@ -2,8 +2,8 @@ import "./styles/Cart.css";
 
 export default function Cart() {
   return (
-    <div>
+    <main className="cart">
       Cart
-    </div>
+    </main>
   );
 }

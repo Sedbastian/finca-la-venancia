@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Tangerine;
+  src: url(./components/styles/Tangerine-Bold.ttf);
+}
+
+@font-face {
+  font-family: Gloria;
+  src: url(./components/styles/GloriaHallelujah-Regular.ttf);
+}
+
+div#root {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  
+  background-image: url("./catalog/3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

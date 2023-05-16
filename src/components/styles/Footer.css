@@ -1,0 +1,41 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+footer a {
+  text-decoration: none;
+  font-family: Gloria;
+  font-weight: 900;
+  font-size: 1rem;
+}
+footer a.sedbastian {
+  color: hsl(255, 100%, 70%);
+}
+footer a.sedbastian:hover {
+  color: hsl(255, 100%, 80%);
+}
+footer a.github {
+  color: hsl(23, 100%, 50%);
+  display: flex;
+  align-items: center;
+}
+footer a.github:hover {
+  color: hsl(23, 100%, 70%);
+  transform: rotateX(720deg);
+  transition: transform 2s;
+}
+
+footer div.year {
+  font-family: Gloria;
+  font-weight: 900;
+  color: hsl(255, 100%, 70%);
+  font-size: 1rem;
+}
+footer svg {
+  height: 1.5rem;
+}

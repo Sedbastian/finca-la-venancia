@@ -1,13 +1,16 @@
 import "./App.css";
 import { Outlet } from "react-router-dom";
+import { Fragment } from "react";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
+    <Fragment>
+      <Header />
       <Outlet />
-    </div>
+      <Footer />
+    </Fragment>
   );
 }
 
