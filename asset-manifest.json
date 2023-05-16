@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.8a685450.css",
-    "main.js": "/shopping-cart/static/js/main.8bf4dccd.js",
+    "main.css": "/shopping-cart/static/css/main.a2ba569b.css",
+    "main.js": "/shopping-cart/static/js/main.31023847.js",
+    "static/media/3.jpg": "/shopping-cart/static/media/3.1b06c38fa6bdbcdc417a.jpg",
+    "static/media/Van-Gogh-Self-Portrait.jpg": "/shopping-cart/static/media/Van-Gogh-Self-Portrait.d615f905f39ac5a4a317.jpg",
+    "static/media/Tangerine-Bold.ttf": "/shopping-cart/static/media/Tangerine-Bold.290f181679aa2ef327e4.ttf",
+    "static/media/GloriaHallelujah-Regular.ttf": "/shopping-cart/static/media/GloriaHallelujah-Regular.c9da976c6f9088d1b3c9.ttf",
     "index.html": "/shopping-cart/index.html",
-    "main.8a685450.css.map": "/shopping-cart/static/css/main.8a685450.css.map",
-    "main.8bf4dccd.js.map": "/shopping-cart/static/js/main.8bf4dccd.js.map"
+    "main.a2ba569b.css.map": "/shopping-cart/static/css/main.a2ba569b.css.map",
+    "main.31023847.js.map": "/shopping-cart/static/js/main.31023847.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a685450.css",
-    "static/js/main.8bf4dccd.js"
+    "static/css/main.a2ba569b.css",
+    "static/js/main.31023847.js"
   ]
 }
