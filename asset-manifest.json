@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.a2ba569b.css",
-    "main.js": "/shopping-cart/static/js/main.31023847.js",
-    "static/media/3.jpg": "/shopping-cart/static/media/3.1b06c38fa6bdbcdc417a.jpg",
-    "static/media/Van-Gogh-Self-Portrait.jpg": "/shopping-cart/static/media/Van-Gogh-Self-Portrait.d615f905f39ac5a4a317.jpg",
+    "main.css": "/shopping-cart/static/css/main.249a3e9d.css",
+    "main.js": "/shopping-cart/static/js/main.d080231e.js",
+    "static/media/101_1215.JPG": "/shopping-cart/static/media/101_1215.8c770a55eb942ecf3cb5.JPG",
+    "static/media/101_1221.JPG": "/shopping-cart/static/media/101_1221.c129c33116b0c5a8c024.JPG",
+    "static/media/101_0518.JPG": "/shopping-cart/static/media/101_0518.ffd6a23b9be8ff8e85eb.JPG",
+    "static/media/nueces.jpg": "/shopping-cart/static/media/nueces.407df8d811525cd8ad14.jpg",
+    "static/media/179.jpg": "/shopping-cart/static/media/179.17548572f7dc5acdd897.jpg",
+    "static/media/PlayfairDisplay-Italic-VariableFont_wght.ttf": "/shopping-cart/static/media/PlayfairDisplay-Italic-VariableFont_wght.2d297421b9c99741bf1c.ttf",
+    "static/media/Montserrat-Medium.ttf": "/shopping-cart/static/media/Montserrat-Medium.3a0917345468c959207a.ttf",
+    "static/media/AoboshiOne-Regular.ttf": "/shopping-cart/static/media/AoboshiOne-Regular.e226f0a5b64f6898817d.ttf",
+    "static/media/DancingScript-Regular.ttf": "/shopping-cart/static/media/DancingScript-Regular.5bfc0dcc0c0ff5a2832e.ttf",
     "static/media/Tangerine-Bold.ttf": "/shopping-cart/static/media/Tangerine-Bold.290f181679aa2ef327e4.ttf",
     "static/media/GloriaHallelujah-Regular.ttf": "/shopping-cart/static/media/GloriaHallelujah-Regular.c9da976c6f9088d1b3c9.ttf",
     "index.html": "/shopping-cart/index.html",
-    "main.a2ba569b.css.map": "/shopping-cart/static/css/main.a2ba569b.css.map",
-    "main.31023847.js.map": "/shopping-cart/static/js/main.31023847.js.map"
+    "main.249a3e9d.css.map": "/shopping-cart/static/css/main.249a3e9d.css.map",
+    "main.d080231e.js.map": "/shopping-cart/static/js/main.d080231e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2ba569b.css",
-    "static/js/main.31023847.js"
+    "static/css/main.249a3e9d.css",
+    "static/js/main.d080231e.js"
   ]
 }
