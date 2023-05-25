@@ -10,6 +10,7 @@ export default function Footer() {
       <a
         href="https://github.com/Sedbastian/shopping-cart"
         className="github"
+        title="githubRepo"
       >
         <GitHubSvg />
       </a>

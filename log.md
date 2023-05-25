@@ -50,3 +50,59 @@
 
 - Got rid of currentTab State in Home.jsx and manage currentTab className in Header.jsx using react-router-dom's useLocation hook.
 
+- **_Commit: `Layout & refactor currentTab state`_**
+
+- Begin writing jest tests
+
+### 17/5
+
+- Jest tests:
+  - Describe `<App />`
+  - Describe `<Header />`
+  - Describe `<Home />`
+  - Describe `<Footer />`
+
+### 18/5
+
+- Create `<Card />` component
+
+### 19/5
+
+- Create `<AddToCart />`component
+- With https://react.dev/learn/extracting-state-logic-into-a-reducer and https://react.dev/learn/scaling-up-with-reducer-and-context as a guide:
+  - Create CartContext.jsx to createContext: CartContext and CartDispatch Context
+  - Modify `<App />`:
+    - Add those Contexts wrapping it's children
+    - Create function cartReducer
+  - Modify `<AddToCart />`:
+    - useContext(CartDispatchContext) in `<AddToCart />`
+    - Create function AddToCart that dispatches "added" action
+
+### 20/5
+
+- Use a `new Map()` instead of an object for managing cart state
+  - Change cart useReducer initial state to be a `new Map()`
+  - Change cartReducer
+- Add cartQuantity to cart Link and its style
+- Add `<Cart />`'s products from cartContext
+
+### 21/5
+
+- Added different `<AddToCart />` functionalities whether `inCart` prop is true
+- Jest tests:
+  - `<Catalog />`
+  - `<Card />`
+
+### 22/5
+
+- Jest tests:
+  - `<AddToCart />`
+
+### 23/5
+
+- `<Cart />` refactor to show a products table
+
+### 25/5
+
+- Change whole content to be from "Finca La Venancia"
+- **_Commit: `Tests, Card and AddToCart component, CartContext, cartReducer`_**

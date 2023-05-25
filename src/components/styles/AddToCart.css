@@ -1,0 +1,75 @@
+div.addContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.addContainer > div.quantityContainer {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: max-content 4rem max-content;
+  gap: 1rem;
+}
+
+div.addContainer > div.quantityContainer > div.quantityTitle {
+  grid-column: 1 / 4;
+  justify-self: center;
+
+  color: #999;
+}
+
+div.addContainer > div.quantityContainer > button {
+  padding: 0 1rem;
+  border-radius: 50%;
+  border: 2px solid #999;
+  background-color: #333;
+  color: #999;
+  font-weight: 900;
+  font-family: Montserrat;
+  font-size: 2rem;
+}
+div.addContainer > div.quantityContainer > button:hover {
+  transform: scale(1.1);
+}
+
+div.addContainer > div.quantityContainer > input {
+  padding: 0 0 0 0rem;
+  text-align: center;
+  border-radius: 1rem;
+  border-style: none;
+  background-color: #999;
+  font-weight: 900;
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+div.addContainer > div.quantityContainer > input[type="number"] {
+  -moz-appearance: textfield;
+}
+div.addContainer > div.quantityContainer > input::-webkit-outer-spin-button,
+div.addContainer > div.quantityContainer > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+div.addContainer > button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border-style: none;
+  background-color: #333;
+  font-weight: 900;
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  color: #999;
+}
+div.addContainer > button:hover {
+  transform: scale(1.1);
+}
+
+div.addContainer > button.addToCart.notAddedQ {
+  background-color: #999;
+  color: #333;
+}

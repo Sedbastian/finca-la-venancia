@@ -1,37 +1,50 @@
 /* Between these widths Header wraps so main.home's padding should be larger */
-@media (min-width: 600px) and (max-width: 780px) {
-  main.home {
-    padding-top: 12rem !important;
+@media (min-width: 600px) and (max-width: 879px) {
+  main {
+    padding-top: 1rem !important;
   }
 }
 
+@media (min-width: 880px) and (max-width: 1150px) and (min-height: 400px) {
+  main {
+    padding-top: 12rem !important;
+  }
+}
 /* Bigger than this width Header doesn't wrap */
-@media (min-width: 781px) and (min-height: 400px) {
-  main.home {
+@media (min-width: 1151px) and (min-height: 400px) {
+  main {
     padding-top: 8rem !important;
   }
 }
 
 main.home {
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-main.home > div.bioContainer {
+main.home > div.homeContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-content: center; */
+  align-content: center;
   gap: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
   border-radius: 2rem;
 }
 
-main.home > div.bioContainer > div.imgContainer {
-  /* align-self: flex-start; */
-  /* /* margin-top: 0; */
+main.home > div.homeContainer > div.pImgCont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
 
+main.home > div.homeContainer div.imgContainer {
+  margin-top: auto;
   margin-bottom: auto;
 
   display: flex;
@@ -39,7 +52,7 @@ main.home > div.bioContainer > div.imgContainer {
 
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  border-radius: 1rem;
 
   animation-duration: 10s;
   /* animation-name: crazyBorder; */
@@ -47,9 +60,9 @@ main.home > div.bioContainer > div.imgContainer {
   animation-direction: alternate-reverse;
   animation-timing-function: linear;
 }
-main.home > div.bioContainer > div.imgContainer img {
+main.home > div.homeContainer div.imgContainer img {
   height: 19rem;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  border-radius: 1rem;
   animation-duration: 10s;
   /* animation-name: crazyBorder; */
   animation-iteration-count: infinite;
@@ -57,16 +70,16 @@ main.home > div.bioContainer > div.imgContainer img {
   animation-timing-function: linear;
 }
 
-@keyframes crazyBorder {
+/* @keyframes crazyBorder {
   from {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
   to {
     border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
   }
-}
+} */
 
-main.home > div.bioContainer > p {
+main.home > div.homeContainer p {
   flex-basis: 30rem;
   flex-grow: 1;
   white-space: pre-wrap;
@@ -79,4 +92,31 @@ main.home > div.bioContainer > p {
   color: palevioletred;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 2rem;
+}
+
+main.home > a.catalogButton {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 1rem;
+  background-image: linear-gradient(45deg, lightgreen, orangered);
+  border: 4px solid black;
+  border-radius: 3rem;
+  font-family: PlayFair;
+  color: rgb(31, 90, 56);
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+main.home > a.catalogButton :nth-child(2) {
+  color: chocolate;
+}
+main.home > a.catalogButton :nth-child(3) {
+  color: crimson;
+}
+main.home > a.catalogButton:hover {
+  border-color: greenyellow;
+  border-width: 4px;
 }

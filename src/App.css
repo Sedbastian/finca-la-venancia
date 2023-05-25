@@ -8,15 +8,33 @@
   src: url(./components/styles/GloriaHallelujah-Regular.ttf);
 }
 
-div#root {
+@font-face {
+  font-family: PlayFair;
+  src: url(./components/styles/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./components/styles/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: Aoboshi;
+  src: url(./components/styles/AoboshiOne-Regular.ttf);
+}
+@font-face {
+  font-family: DancingScript;
+  src: url(./components/styles/DancingScript-Regular.ttf);
+}
+div#root > div.appContainer {
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
-  
-  background-image: url("./catalog/3.jpg");
+
+  background-image: url("./components/images/olivos/179.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

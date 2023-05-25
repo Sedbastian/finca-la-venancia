@@ -1,4 +1,4 @@
-@media (min-width: 600px) and (min-height: 400px) {
+@media (min-width: 880px) and (min-height: 400px) {
   header {
     position: fixed;
     left: 0;
@@ -11,7 +11,7 @@ header {
   margin: 0.4rem;
   padding: 0.5rem;
   border-radius: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 header > div.container {
@@ -23,12 +23,25 @@ header > div.container {
 }
 
 header > div.container > h1 {
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2rem;
   color: orange;
   text-align: center;
-  font-family: Tangerine;
+
   font-size: 4rem;
-  text-shadow: 2px 2px 4px orangered;
+  font-weight: 300;
+}
+header > div.container > h1 > .finca {
+  font-family: DancingScript;
+  color: yellowgreen;
+}
+header > div.container > h1 > .venancia {
+  font-family: DancingScript;
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px orangered, 4px 4px 2px rgb(255, 0, 0);
 }
 
 header > div.container > nav {
@@ -37,16 +50,61 @@ header > div.container > nav {
   gap: 1.5rem;
 }
 
-header > div.container > nav > a {
-  color: rgb(155, 117, 103);
+header > div.container > nav > * {
+  display: flex;
+  align-content: center;
+
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: 2px solid rgba(153, 205, 50, 0);
   font-size: 2rem;
+}
+header > div.container > nav > a.homeLink {
+  color: rgb(36, 128, 0);
+}
+header > div.container > nav > a.catalogLink {
+  color: olive;
   white-space: nowrap;
 }
-header > div.container > nav > a:hover svg:not(.currentTab) {
-  transform: scale(1.1);
-  color: olive;
+header > div.container > nav > a.catalogLink :nth-child(2) {
+  color: chocolate;
+}
+header > div.container > nav > a.catalogLink :nth-child(3) {
+  color: crimson;
+}
+header > div.container > nav > a.cartLink {
+  color: rgb(236, 174, 79);
+  text-decoration: none;
+}
+header > div.container > nav > a.cartLink > div.cartQuantityContainer {
+  position: relative;
+  left: -5%;
+  top: 40%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 50%;
+  height: 1.5rem;
+  background-color: orangered;
+}
+header
+  > div.container
+  > nav
+  > a.cartLink
+  > div.cartQuantityContainer
+  > div.cartQuantity {
+  font-family: Gloria;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: white;
+}
+header > div.container > nav > *:hover:not(.currentTab) {
+  border: 2px solid rgba(153, 205, 50, 0.5);
 }
 
-header > div.container > nav > a .currentTab {
-  color: rgb(184, 49, 0);
+header > div.container > nav > a.currentTab {
+  border: 2px solid yellowgreen;
 }

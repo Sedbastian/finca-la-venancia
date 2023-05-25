@@ -1,42 +1,63 @@
 import "./styles/Header.css";
 import { useLocation, Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouseChimney,
-  faPalette,
-  faPaintbrush,
-  faCartShopping
+  faBottleDroplet,
+  faBrain,
+  faJar,
+  faBasketShopping
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const location = useLocation();
+  const cartQuantity = useContext(CartContext).size;
 
   return (
     <header>
       <div className="container">
-        <h1>Van Gogh's Paintings' Shop</h1>
+        <h1>
+          <div className="finca">Finca Agroecológica</div>{" "}
+          <div className="venancia">“La Venancia”</div>
+        </h1>
         <nav>
-          <Link to={`/`}>
-            <FontAwesomeIcon
-              icon={faHouseChimney}
-              className={location.pathname === "/" ? "currentTab" : ""}
-            />
+          <Link
+            to={`/`}
+            className={
+              location.pathname === "/" ? "homeLink currentTab" : "homeLink"
+            }
+            title="headerHome"
+          >
+            <FontAwesomeIcon icon={faHouseChimney} />
           </Link>
-          <Link to={`catalog`}>
-            <FontAwesomeIcon
-              icon={faPalette}
-              className={location.pathname === "/catalog" ? "currentTab" : ""}
-            />
-            <FontAwesomeIcon
-              icon={faPaintbrush}
-              className={location.pathname === "/catalog" ? "currentTab" : ""}
-            />
+          <Link
+            to={`catalog`}
+            className={
+              location.pathname === "/catalog"
+                ? "catalogLink currentTab"
+                : "catalogLink"
+            }
+            title="headerCatalog"
+          >
+            <FontAwesomeIcon icon={faBottleDroplet} />
+            <FontAwesomeIcon icon={faBrain} />
+            <FontAwesomeIcon icon={faJar} />
           </Link>
-          <Link to={`cart`}>
-            <FontAwesomeIcon
-              icon={faCartShopping}
-              className={location.pathname === "/cart" ? "currentTab" : ""}
-            />
+          <Link
+            to={`cart`}
+            className={
+              location.pathname === "/cart" ? "cartLink currentTab" : "cartLink"
+            }
+            title="headerCart"
+          >
+            <FontAwesomeIcon icon={faBasketShopping} />
+            {cartQuantity > 0 && (
+              <div className="cartQuantityContainer">
+                <div className="cartQuantity">{cartQuantity}</div>
+              </div>
+            )}
           </Link>
         </nav>
       </div>
