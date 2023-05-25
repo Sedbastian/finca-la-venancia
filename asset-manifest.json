@@ -1,24 +1,33 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.249a3e9d.css",
-    "main.js": "/shopping-cart/static/js/main.d080231e.js",
+    "main.css": "/shopping-cart/static/css/main.c816dfee.css",
+    "main.js": "/shopping-cart/static/js/main.ae4822db.js",
     "static/media/101_1215.JPG": "/shopping-cart/static/media/101_1215.8c770a55eb942ecf3cb5.JPG",
     "static/media/101_1221.JPG": "/shopping-cart/static/media/101_1221.c129c33116b0c5a8c024.JPG",
     "static/media/101_0518.JPG": "/shopping-cart/static/media/101_0518.ffd6a23b9be8ff8e85eb.JPG",
-    "static/media/nueces.jpg": "/shopping-cart/static/media/nueces.407df8d811525cd8ad14.jpg",
     "static/media/179.jpg": "/shopping-cart/static/media/179.17548572f7dc5acdd897.jpg",
+    "static/media/Naranjas.jpg": "/shopping-cart/static/media/Naranjas.fe9697e4c68460d3d421.jpg",
     "static/media/PlayfairDisplay-Italic-VariableFont_wght.ttf": "/shopping-cart/static/media/PlayfairDisplay-Italic-VariableFont_wght.2d297421b9c99741bf1c.ttf",
+    "static/media/ArropeDeUva.jpg": "/shopping-cart/static/media/ArropeDeUva.b1ab1d20967c9d860496.jpg",
+    "static/media/Propoleo.jpg": "/shopping-cart/static/media/Propoleo.0d834368b5532261940a.jpg",
+    "static/media/Aceite.jpg": "/shopping-cart/static/media/Aceite.dc32475fd0253f750d1b.jpg",
+    "static/media/Nueces2.jpg": "/shopping-cart/static/media/Nueces2.bb780c5e32fa0634b2d9.jpg",
     "static/media/Montserrat-Medium.ttf": "/shopping-cart/static/media/Montserrat-Medium.3a0917345468c959207a.ttf",
+    "static/media/FloresOlivo.jpg": "/shopping-cart/static/media/FloresOlivo.1494ac97b2afd88fb595.jpg",
+    "static/media/Nueces.jpg": "/shopping-cart/static/media/Nueces.20819a0d0e8cab33f252.jpg",
+    "static/media/AceiteVidrio.jpg": "/shopping-cart/static/media/AceiteVidrio.176356c349b3573c4692.jpg",
+    "static/media/FrascosAceitunas.jpg": "/shopping-cart/static/media/FrascosAceitunas.1087889c0e1e747ada06.jpg",
     "static/media/AoboshiOne-Regular.ttf": "/shopping-cart/static/media/AoboshiOne-Regular.e226f0a5b64f6898817d.ttf",
     "static/media/DancingScript-Regular.ttf": "/shopping-cart/static/media/DancingScript-Regular.5bfc0dcc0c0ff5a2832e.ttf",
     "static/media/Tangerine-Bold.ttf": "/shopping-cart/static/media/Tangerine-Bold.290f181679aa2ef327e4.ttf",
     "static/media/GloriaHallelujah-Regular.ttf": "/shopping-cart/static/media/GloriaHallelujah-Regular.c9da976c6f9088d1b3c9.ttf",
+    "static/media/Cueva_arana.jpg": "/shopping-cart/static/media/Cueva_arana.7163185b4dc02e66106d.jpg",
     "index.html": "/shopping-cart/index.html",
-    "main.249a3e9d.css.map": "/shopping-cart/static/css/main.249a3e9d.css.map",
-    "main.d080231e.js.map": "/shopping-cart/static/js/main.d080231e.js.map"
+    "main.c816dfee.css.map": "/shopping-cart/static/css/main.c816dfee.css.map",
+    "main.ae4822db.js.map": "/shopping-cart/static/js/main.ae4822db.js.map"
   },
   "entrypoints": [
-    "static/css/main.249a3e9d.css",
-    "static/js/main.d080231e.js"
+    "static/css/main.c816dfee.css",
+    "static/js/main.ae4822db.js"
   ]
 }
