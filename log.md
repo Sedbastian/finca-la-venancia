@@ -105,4 +105,8 @@
 ### 25/5
 
 - Change whole content to be from "Finca La Venancia"
+- Change Media Queries for Header and Home
 - **_Commit: `Tests, Card and AddToCart component, CartContext, cartReducer`_**
+- Add useEffect to `<Home />`, `<Catalog />` and `<Cart>` to make them scroll to top each time they're re-rendered
+- More Venancia styling.
+- **_Commit: `Add useEffect to scroll to top in Home, Catalog, Cart`_**

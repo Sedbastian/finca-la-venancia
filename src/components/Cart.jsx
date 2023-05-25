@@ -1,11 +1,17 @@
 import "./styles/Cart.css";
-import { useContext } from "react";
+import { useEffect, useContext, Fragment } from "react";
 import { CartContext } from "../CartContext";
 import products from "./products";
 import Card from "./Card";
 import AddToCart from "./AddToCart";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
 
 export default function Cart() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+  
   const cart = useContext(CartContext);
 
   let totalAmount = 0;
@@ -24,7 +30,9 @@ export default function Cart() {
         <div>{product.name}</div>
         <div className="number">${product.price}</div>
         <div>{product.unit}</div>
-        <div className="number productMult">${product.quantity * product.price}</div>
+        <div className="number productMult">
+          ${product.quantity * product.price}
+        </div>
       </li>
     );
   });
@@ -57,19 +65,28 @@ export default function Cart() {
       {cart.size === 0 ? (
         <p>El carrito está vacio...</p>
       ) : (
-        <ul className="cartTable">
-          <li className="head">
-            <div className="number">Cantidad</div>
-            <div>Producto</div>
-            <div className="number">Precio por unidad</div>
-            <div>Unidad</div>
-            <div className="number productMultHead">Subtotales</div>
-          </li>
-          {billItems}
-          {totalAmountLi}
-        </ul>
+        <Fragment>
+          <ul className="cartTable">
+            <li className="head">
+              <div className="number">Cantidad</div>
+              <div>Producto</div>
+              <div className="number">Precio por unidad</div>
+              <div>Unidad</div>
+              <div className="number productMultHead">Subtotales</div>
+            </li>
+            {billItems}
+            {totalAmountLi}
+            <button
+              className="checkout"
+              onClick={() => alert("Próximamente...")}
+            >
+              <FontAwesomeIcon icon={faTruckFast} /> Confirmar pedido
+            </button>
+          </ul>
+          <h3>Contenido del Carrito</h3>
+          <ul className="cartList">{cartCards}</ul>
+        </Fragment>
       )}
-      <ul className="cartList">{cartCards}</ul>
     </main>
   );
 }

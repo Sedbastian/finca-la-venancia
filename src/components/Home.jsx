@@ -1,5 +1,6 @@
 import "./styles/Home.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBottleDroplet,
@@ -11,6 +12,10 @@ import foto2 from "./images/background/101_0518.JPG";
 import foto3 from "./images/background/101_1221.JPG";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <main className="home">
       <div className="homeContainer">
@@ -19,16 +24,18 @@ export default function Home() {
             <img src={foto2} alt="Olivos por Van Gogh" />
           </div>
           <p>
-            {
-              "    Vincent Willem van Gogh (1853 – 1890) was a Dutch Post-Impressionist painter who posthumously became one of the most famous and influential figures in Western art history."
-            }
+            {"    "}
+            La Venancia esta ubicada en el pueblo de Santa Vera Cruz, al norte
+            del departamento Castro Barros.
           </p>
         </div>
         <div className="pImgCont">
           <p>
-            {
-              "    In a decade, he created about 2,100 artworks, including around 860 oil paintings, most of which date from the last two years of his life."
-            }
+            {"    "}
+            Compuesta de un hermoso y viejo olivar de 160 olivos en convivencia
+            con una gran diversidad de otros frutales como nogales, vid,
+            duraznos, damascos, membrillos, higueras, todo conviviendo en
+            armonía con el monte nativo.
           </p>
           <div className="imgContainer">
             <img src={foto1} alt="Olivos por Van Gogh" />
@@ -39,9 +46,8 @@ export default function Home() {
             <img src={foto3} alt="Olivos por Van Gogh" />
           </div>
           <p>
-            {
-              "    They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art."
-            }
+            {"    "}
+            Hay también muchas aromaticas y tenemos espacios para huerta.
           </p>
         </div>
       </div>

@@ -44,5 +44,12 @@
   "homepage": "https://sedbastian.github.io/shopping-cart/",
   "devDependencies": {
     "gh-pages": "^5.0.0"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "trailingComma": "none",
+    "arrowParens": "avoid",
+    "semi": true
   }
 }
