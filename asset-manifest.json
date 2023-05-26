@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/finca-la-venancia/static/css/main.ac0fc7d7.css",
-    "main.js": "/finca-la-venancia/static/js/main.81a89fac.js",
+    "main.css": "/finca-la-venancia/static/css/main.53a3dd21.css",
+    "main.js": "/finca-la-venancia/static/js/main.12869cac.js",
     "static/media/101_1215.JPG": "/finca-la-venancia/static/media/101_1215.8c770a55eb942ecf3cb5.JPG",
     "static/media/101_1221.JPG": "/finca-la-venancia/static/media/101_1221.c129c33116b0c5a8c024.JPG",
     "static/media/101_0518.JPG": "/finca-la-venancia/static/media/101_0518.ffd6a23b9be8ff8e85eb.JPG",
@@ -23,11 +23,11 @@
     "static/media/GloriaHallelujah-Regular.ttf": "/finca-la-venancia/static/media/GloriaHallelujah-Regular.c9da976c6f9088d1b3c9.ttf",
     "static/media/Cueva_arana.jpg": "/finca-la-venancia/static/media/Cueva_arana.7163185b4dc02e66106d.jpg",
     "index.html": "/finca-la-venancia/index.html",
-    "main.ac0fc7d7.css.map": "/finca-la-venancia/static/css/main.ac0fc7d7.css.map",
-    "main.81a89fac.js.map": "/finca-la-venancia/static/js/main.81a89fac.js.map"
+    "main.53a3dd21.css.map": "/finca-la-venancia/static/css/main.53a3dd21.css.map",
+    "main.12869cac.js.map": "/finca-la-venancia/static/js/main.12869cac.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac0fc7d7.css",
-    "static/js/main.81a89fac.js"
+    "static/css/main.53a3dd21.css",
+    "static/js/main.12869cac.js"
   ]
 }
