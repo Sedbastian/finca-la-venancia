@@ -1,4 +1,3 @@
-import "./styles/Catalog.css";
 import { useEffect } from "react";
 import products from "./products";
 import Card from "./Card";

@@ -6,10 +6,10 @@ div.addContainer {
 }
 
 div.addContainer > div.quantityContainer {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: max-content 4rem max-content;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 div.addContainer > div.quantityContainer > div.quantityTitle {
@@ -31,6 +31,10 @@ div.addContainer > div.quantityContainer > button {
 }
 div.addContainer > div.quantityContainer > button:hover {
   transform: scale(1.1);
+}
+div.addContainer > div.quantityContainer > button:active {
+  border-color: white;
+  color: white;
 }
 
 div.addContainer > div.quantityContainer > input {
@@ -68,7 +72,10 @@ div.addContainer > button {
 div.addContainer > button:hover {
   transform: scale(1.1);
 }
-
+div.addContainer > button:active {
+  border-color: white;
+  color: white;
+}
 div.addContainer > button.addToCart.notAddedQ {
   background-color: #999;
   color: #333;

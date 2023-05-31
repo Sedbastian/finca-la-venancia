@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import React from "react";
+
 import "@testing-library/jest-dom";
 import "@testing-library/jest-dom/extend-expect";
 import userEvent from "@testing-library/user-event";
 import { render, screen } from "@testing-library/react";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+
+// Components
 import App from "./App";
 import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home";
@@ -11,8 +14,47 @@ import Catalog from "./components/Catalog";
 import Cart from "./components/Cart";
 import Card from "./components/Card";
 import AddToCart from "./components/AddToCart";
-import products from "./products";
-import { CartContext, CartDispatchContext } from "./CartContext";
+import products from "./components/products";
+
+// Mocks
+window.scrollTo = jest.fn();
+
+jest.mock("./components/products", () => {
+  const productsMock = new Map();
+
+  productsMock.set("Nueces Peladas", {
+    category: "Productos Principales",
+    name: "Nueces Peladas",
+    images: [],
+    description: "Agroecológicas, criollas, mariposa",
+    price: 2000,
+    quantity: 1,
+    unit: "kilo"
+  });
+
+  productsMock.set("Aceite de Oliva Virgen Extra", {
+    category: "Productos Principales",
+    name: "Aceite de Oliva Virgen Extra",
+    images: [],
+    description: "Variedades: Arauco, Arbequina, Manzanilla",
+    quantity: 1,
+    price: 2000,
+    unit: "litro"
+  });
+
+  productsMock.set("Aceitunas Negras en Salmuera", {
+    category: "Productos Principales",
+    name: "Aceitunas Negras en Salmuera",
+    images: [],
+    description:
+      "Aceitunas variedad Arauco, maduras, negras, agroecológicas en salmuera al 6%",
+    quantity: 1,
+    price: 1000,
+    unit: "frasco de 1 kilo escurrido"
+  });
+
+  return productsMock;
+});
 
 describe("App component", () => {
   it("Matches snapshot", () => {
@@ -64,7 +106,7 @@ describe("Header component", () => {
     render(<RouterProvider router={router} />);
 
     expect(screen.getByRole("heading").textContent).toMatch(
-      /van gogh's paintings' shop/i
+      /finca agroecológica “la venancia”/i
     );
   });
 
@@ -93,16 +135,16 @@ describe("Header component", () => {
     render(<RouterProvider router={router} />);
 
     const headerCatalogLink = screen.getByRole("link", {
-      name: "headerCatalog"
+      name: "Catálogo"
     });
     await user.click(headerCatalogLink);
     expect(document.location.hash).toBe("#/catalog");
 
-    const headerCartLink = screen.getByRole("link", { name: "headerCart" });
+    const headerCartLink = screen.getByRole("link", { name: "Carrito" });
     await user.click(headerCartLink);
     expect(document.location.hash).toBe("#/cart");
 
-    const headerHomeLink = screen.getByRole("link", { name: "headerHome" });
+    const headerHomeLink = screen.getByRole("link", { name: "Inicio" });
     await user.click(headerHomeLink);
     expect(document.location.hash).toBe("#/");
   });
@@ -134,12 +176,12 @@ describe("Home component", () => {
     render(<RouterProvider router={router} />);
 
     const homeCatalogLink = screen.getByRole("link", {
-      name: "Catalog"
+      name: "Catálogo de Productos"
     });
     await user.click(homeCatalogLink);
     expect(document.location.hash).toBe("#/catalog");
 
-    const homeLink = screen.getByRole("link", { name: "headerHome" });
+    const homeLink = screen.getByRole("link", { name: "Inicio" });
     await user.click(homeLink);
     expect(document.location.hash).toBe("#/");
   });
@@ -201,7 +243,7 @@ describe("AddToCart component", () => {
 
     render(<AddToCart name="Test product" quantityProp={8} />);
 
-    const decrementQuantityButton = screen.getByRole("button", { name: "-" });
+    const decrementQuantityButton = screen.getByRole("button", { name: "–" });
     const incrementQuantityButton = screen.getByRole("button", { name: "+" });
     const inputQuantity = screen.getByRole("spinbutton");
 
@@ -229,65 +271,69 @@ describe("AddToCart component", () => {
 
     expect(addToCartButton.classList["1"]).toBe("notAddedQ");
   });
+});
 
-  // it("Correctly sends 'added' dispatch action", async () => {
-  //   const productMock = {
-  //     category: "Productos Principales",
-  //     name: "Mocked product",
-  //     image: "nueces.jpg",
-  //     description: "Agroecológicas, criollas, mariposa",
-  //     price: 2000,
-  //     quantity: 1,
-  //     quantityPerPrice: "kg"
-  //   };
+describe("System test", () => {
+  it("Correctly adds products and show total amount", async () => {
+    const router = createHashRouter([
+      {
+        path: "/",
+        element: <App />,
+        errorElement: <ErrorPage />,
+        children: [
+          {
+            index: true,
+            element: <Home />
+          },
+          {
+            path: "catalog",
+            element: <Catalog />
+          },
+          {
+            path: "cart",
+            element: <Cart />
+          }
+        ]
+      }
+    ]);
 
-  //   const router = createHashRouter([
-  //     {
-  //       path: "/",
-  //       element: <App />,
-  //       errorElement: <ErrorPage />,
-  //       children: [
-  //         {
-  //           index: true,
-  //           element: (
-  //             <Card product={productMock}>
-  //               <AddToCart
-  //                 name={productMock.name}
-  //                 quantityProp={productMock.quantity}
-  //               />
-  //             </Card>
-  //           )
-  //         }
-  //       ]
-  //     }
-  //   ]);
+    const user = userEvent.setup();
+    render(<RouterProvider router={router} />);
 
-  //   const user = userEvent.setup();
-  //   render(<RouterProvider router={router} />);
+    // Go Home
+    const homeLink = screen.getByRole("link", {
+      name: "Inicio"
+    });
+    await user.click(homeLink);
+    expect(document.location.hash).toBe("#/");
 
-  //   const homeLink = screen.getByRole("link", {
-  //     name: "headerHome"
-  //   });
-  //   await user.click(homeLink);
-  //   expect(document.location.hash).toBe("#/");
+    // Go to Catalog
+    const catalogButton = screen.getByRole("link", {
+      name: "Catálogo de Productos"
+    });
+    await user.click(catalogButton);
+    expect(document.location.hash).toBe("#/catalog");
 
-  //   const decrementQuantityButton = screen.getByRole("button", { name: "-" });
-  //   const incrementQuantityButton = screen.getByRole("button", { name: "+" });
-  //   const addToCartButton = screen.getByRole("button", {
-  //     name: "Agregar al carrito"
-  //   });
+    // Add to Cart 4 units of each product displayed
+    const catalogList = screen.getAllByRole("listitem");
+    catalogList.forEach(async card => {
+      const addToCartButton = card.querySelector(".addToCart");
+      await user.click(addToCartButton);
+    });
 
-  //   await user.click(incrementQuantityButton);
-  //   await user.click(incrementQuantityButton);
+    // Go to Cart
+    const cartButton = screen.getByRole("link", {
+      name: "Carrito"
+    });
+    await user.click(cartButton);
+    expect(document.location.hash).toBe("#/cart");
 
-  //   await user.click(decrementQuantityButton);
+    // cartLink shows correct number of added products
+    expect(screen.getByTestId("cartQuantity").textContent).toBe("3");
 
-  //   await user.click(incrementQuantityButton);
-  //   await user.click(incrementQuantityButton);
-
-  //   await user.click(addToCartButton);
-
-  //   const cart = useContext(CartContext);
-
-  // });
+    // cartTable shows correct totalAmomunt
+    expect(screen.getByRole("generic", { name: "total" }).textContent).toBe(
+      "$5000"
+    );
+  });
 });

@@ -110,3 +110,9 @@
 - Add useEffect to `<Home />`, `<Catalog />` and `<Cart>` to make them scroll to top each time they're re-rendered
 - More Venancia styling.
 - **_Commit: `Add useEffect to scroll to top in Home, Catalog, Cart`_**
+
+### 28/5
+
+- Jest test:
+  - System test
+  

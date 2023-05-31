@@ -61,7 +61,7 @@ main.home > div.homeContainer div.imgContainer {
   animation-timing-function: linear;
 }
 main.home > div.homeContainer div.imgContainer img {
-  height: 19rem;
+  width: 19rem;
   border-radius: 1rem;
   animation-duration: 10s;
   /* animation-name: crazyBorder; */
@@ -105,8 +105,11 @@ main.home > a.catalogButton {
   font-family: PlayFair;
   color: rgb(31, 90, 56);
   text-decoration: none;
+  text-align: center;
   font-size: 3rem;
   font-weight: 700;
+}
+main.home > a.catalogButton svg {
   white-space: nowrap;
 }
 main.home > a.catalogButton :nth-child(2) {

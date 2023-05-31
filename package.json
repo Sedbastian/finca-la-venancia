@@ -1,5 +1,5 @@
 {
-  "name": "shopping-cart",
+  "name": "finca-la-venancia",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,9 +41,10 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://sedbastian.github.io/shopping-cart/",
+  "homepage": "https://sedbastian.github.io/finca-la-venancia/",
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "jest-environment-jsdom": "^29.5.0"
   },
   "prettier": {
     "tabWidth": 2,

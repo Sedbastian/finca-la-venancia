@@ -1,7 +1,8 @@
 import "./index.css";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+
 import App from "./App";
 import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home";

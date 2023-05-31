@@ -28,7 +28,7 @@ export default function Header() {
             className={
               location.pathname === "/" ? "homeLink currentTab" : "homeLink"
             }
-            title="headerHome"
+            title="Inicio"
           >
             <FontAwesomeIcon icon={faHouseChimney} />
           </Link>
@@ -39,7 +39,7 @@ export default function Header() {
                 ? "catalogLink currentTab"
                 : "catalogLink"
             }
-            title="headerCatalog"
+            title="Catálogo"
           >
             <FontAwesomeIcon icon={faBottleDroplet} />
             <FontAwesomeIcon icon={faBrain} />
@@ -50,12 +50,12 @@ export default function Header() {
             className={
               location.pathname === "/cart" ? "cartLink currentTab" : "cartLink"
             }
-            title="headerCart"
+            title="Carrito"
           >
             <FontAwesomeIcon icon={faBasketShopping} />
             {cartQuantity > 0 && (
               <div className="cartQuantityContainer">
-                <div className="cartQuantity">{cartQuantity}</div>
+                <div data-testid="cartQuantity" className="cartQuantity">{cartQuantity}</div>
               </div>
             )}
           </Link>

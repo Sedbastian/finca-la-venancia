@@ -21,7 +21,7 @@ export default function Home() {
       <div className="homeContainer">
         <div className="pImgCont">
           <div className="imgContainer">
-            <img src={foto2} alt="Olivos por Van Gogh" />
+            <img src={foto3} alt="Olivos por Van Gogh" />
           </div>
           <p>
             {"    "}
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <div className="pImgCont">
           <div className="imgContainer">
-            <img src={foto3} alt="Olivos por Van Gogh" />
+            <img src={foto2} alt="Olivos por Van Gogh" />
           </div>
           <p>
             {"    "}
@@ -54,7 +54,7 @@ export default function Home() {
       <Link to={`catalog`} className="catalogButton">
         <FontAwesomeIcon icon={faBottleDroplet} />
         <FontAwesomeIcon icon={faBrain} />
-        <FontAwesomeIcon icon={faJar} /> Catálogo
+        <FontAwesomeIcon icon={faJar} /> Catálogo de Productos
       </Link>
     </main>
   );

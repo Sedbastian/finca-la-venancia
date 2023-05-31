@@ -29,16 +29,23 @@ main.cart > p {
   color: #aaa;
 }
 
+main.cart > div.cartTableContainer {
+  width: 100%;
+
+  padding-top: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 ul.cartTable {
-  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 0.5rem;
 
-  padding: 1rem;
+  overflow-x: auto;
+
+  padding-bottom: 1rem;
   border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
   color: white;
 }
 
@@ -47,6 +54,8 @@ ul.cartTable > li {
   grid-template-rows: 1fr;
   grid-template-columns: 8rem 22rem 13rem 11rem 9rem;
   column-gap: 1rem;
+
+  padding-right: 1rem;
 }
 
 ul.cartTable > li.head {

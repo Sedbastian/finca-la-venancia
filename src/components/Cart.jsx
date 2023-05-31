@@ -11,7 +11,7 @@ export default function Cart() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
-  
+
   const cart = useContext(CartContext);
 
   let totalAmount = 0;
@@ -43,7 +43,9 @@ export default function Cart() {
       <div>TOTAL</div>
       <div></div>
       <div></div>
-      <div className="number total">${totalAmount}</div>
+      <div title="total" className="number total">
+        ${totalAmount}
+      </div>
     </li>
   );
 
@@ -66,23 +68,25 @@ export default function Cart() {
         <p>El carrito está vacio...</p>
       ) : (
         <Fragment>
-          <ul className="cartTable">
-            <li className="head">
-              <div className="number">Cantidad</div>
-              <div>Producto</div>
-              <div className="number">Precio por unidad</div>
-              <div>Unidad</div>
-              <div className="number productMultHead">Subtotales</div>
-            </li>
-            {billItems}
-            {totalAmountLi}
-            <button
-              className="checkout"
-              onClick={() => alert("Próximamente...")}
-            >
-              <FontAwesomeIcon icon={faTruckFast} /> Confirmar pedido
-            </button>
-          </ul>
+          <div className="cartTableContainer">
+            <ul className="cartTable">
+              <li className="head">
+                <div className="number">Cantidad</div>
+                <div>Producto</div>
+                <div className="number">Precio por unidad</div>
+                <div>Unidad</div>
+                <div className="number productMultHead">Subtotales</div>
+              </li>
+              {billItems}
+              {totalAmountLi}
+              <button
+                className="checkout"
+                onClick={() => alert("Próximamente...")}
+              >
+                <FontAwesomeIcon icon={faTruckFast} /> Confirmar pedido
+              </button>
+            </ul>
+          </div>
           <h3>Contenido del Carrito</h3>
           <ul className="cartList">{cartCards}</ul>
         </Fragment>
